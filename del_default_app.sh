@@ -1,7 +1,7 @@
 sudo rm -rf /Applications/Books.app
 sudo rm -rf /Applications/Calendar.app
 sudo rm -rf /Applications/Chess.app
-sudo rm -rf /Applications/Contact.app
+sudo rm -rf /Applications/Contacts.app
 sudo rm -rf /Applications/Dashboard.app
 sudo rm -rf /Applications/Dictionary.app
 sudo rm -rf /Applications/Facetime.app
@@ -12,7 +12,7 @@ sudo rm -rf /Applications/Launchpad.app
 sudo rm -rf /Applications/Maps.app
 sudo rm -rf /Applications/Messages.app
 sudo rm -rf /Applications/News.app
-sudo rm -rf /Applications/Note.app
+sudo rm -rf /Applications/Notes.app
 sudo rm -rf /Applications/Photo\ Booth.app
 sudo rm -rf /Applications/Photos.app
 sudo rm -rf /Applications/Reminders.app
