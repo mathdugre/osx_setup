@@ -98,6 +98,7 @@ function __prompt_command {
     fi
 
     PS1+="\n${return_code}$ \[\e[m\]"
+    update_terminal_cwd
 }
 
 PROMPT_COMMAND=__prompt_command
