@@ -7,6 +7,7 @@ export PATH="~/bin:$PATH"
 ### Utils ###
 # Convenience
 alias ls='ls -GFh'
+alias l=ls
 alias ll='ls -la'
 alias mkdir='mkdir -pv'
 alias c='clear'
