@@ -81,12 +81,13 @@ function parse_git_dirty {
 	fi
 }
 
-# Add red if exit code non 0
 function __prompt_command {
-    PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]\`parse_git_branch\`"
+    PS1="($(basename "$VIRTUAL_ENV")) "
+    PS1+="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]"
+    PS1+="\`parse_git_branch\`"
 
     if [ $? != 0 ]; then
-        PS1+="\[\e[31m\]"
+        PS1+="\[\e[31m\]" # Add red if exit code non 0
     else
         PS1+="\[\e[m\]"
     fi
