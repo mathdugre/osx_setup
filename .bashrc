@@ -35,7 +35,7 @@ alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings'
 ####################
 
 # get current branch in git repo
-function parse_git_branch() {
+function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	if [ ! "${BRANCH}" == "" ]
 	then
@@ -81,6 +81,20 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]\[\e[32m\]:\[\e[m\]\[\e[33m\]\W\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\]\n$ "
+# Add red if exit code non 0
+function __prompt_command {
+    PS1="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]\`parse_git_branch\`"
+
+    if [ $? != 0 ]; then
+        PS1+="\[\e[31m\]"
+    else
+        PS1+="\[\e[m\]"
+    fi
+
+    PS1+="\n${return_code}$ \[\e[m\]"
+}
+
+PROMPT_COMMAND=__prompt_command
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
