@@ -18,9 +18,11 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+alias venv='source venv/bin/activate'
 
 # Protection
 alias mv='mv -i'
+alias cp='cp -i'
 
 
 ### Python ###
