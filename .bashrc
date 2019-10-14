@@ -82,7 +82,10 @@ function parse_git_dirty {
 }
 
 function __prompt_command {
-    PS1="($(basename "$VIRTUAL_ENV")) "
+    PS1=""
+    if [ "$VIRTUAL_ENV" != "" ]; then
+        PS1="($(basename "$VIRTUAL_ENV")) "
+    fi
     PS1+="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]"
     PS1+="\`parse_git_branch\`"
 
