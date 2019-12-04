@@ -1,4 +1,6 @@
+export PIP_REQUIRE_VIRTUALENV=true
 export PATH="~/bin:$PATH"
+export CPATH=`xcrun --show-sdk-path`/usr/include
 
 ####################
 ###    ALIAS     ###
@@ -20,6 +22,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias venv='source venv/bin/activate'
+alias .venv='source .venv/bin/activate'
 
 # Protection
 alias mv='mv -i'
