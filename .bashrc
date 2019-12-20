@@ -33,6 +33,7 @@ alias cp='cp -i'
 alias py39='/usr/local/bin/python3.9'
 alias py38='/usr/local/bin/python3.8'
 alias py37='/usr/local/bin/python3.7'
+alias py36='/usr/local/bin/python3.6'
 alias py=py38
 alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings'
 
