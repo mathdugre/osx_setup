@@ -1,6 +1,8 @@
 export PIP_REQUIRE_VIRTUALENV=true
 export PATH="~/bin:$PATH"
 export CPATH=`xcrun --show-sdk-path`/usr/include
+export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+
 
 ####################
 ###    ALIAS     ###
@@ -110,3 +112,6 @@ PROMPT_COMMAND=__prompt_command
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+
+# added by travis gem
+[ -f /Users/math/.travis/travis.sh ] && source /Users/math/.travis/travis.sh
