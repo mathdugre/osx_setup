@@ -23,20 +23,14 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-alias venv='source venv/bin/activate'
-alias .venv='source .venv/bin/activate'
 
 # Protection
 alias mv='mv -i'
 alias cp='cp -i'
 
-
 ### Python ###
-alias py39='/usr/local/bin/python3.9'
-alias py38='/usr/local/bin/python3.8'
-alias py37='/usr/local/bin/python3.7'
-alias py36='/usr/local/bin/python3.6'
-alias py=py38
+alias py=python3
+alias venv='source .venv/bin/activate'
 alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings pytest'
 
 ####################
@@ -91,21 +85,22 @@ function parse_git_dirty {
 }
 
 function __prompt_command {
+    local EXIT="$?" # store current exit code
+
     PS1=""
     if [ "$VIRTUAL_ENV" != "" ]; then
         PS1="($(basename "$VIRTUAL_ENV")) "
     fi
-    PS1+="\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]"
-    PS1+="\`parse_git_branch\`"
+    PS1+="\[\e[35m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]:\[\e[33m\]\W\[\e[31m\]"
+    PS1+="\`parse_git_branch\`\n"
 
-    if [ $? != 0 ]; then
-        PS1+="\[\e[31m\]" # Add red if exit code non 0
+    if [[ $EXIT -eq 0 ]]; then
+        PS1+="\[\e[32m\]$"
     else
-        PS1+="\[\e[m\]"
+        PS1+="\[\e[36m\]?${EXIT}" # Add red if exit code non 0
     fi
 
-    PS1+="\n${return_code}$ \[\e[m\]"
-    update_terminal_cwd
+    PS1+=" \[\e[m\]"
 }
 
 PROMPT_COMMAND=__prompt_command
