@@ -37,6 +37,33 @@ alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings pytest
 ###  PS1 Config  ###
 ####################
 
+# COPIED from /etc/bashrc_Apple_Terminal
+update_terminal_cwd() {
+	# Identify the directory using a "file:" scheme URL, including
+	# the host name to disambiguate local vs. remote paths.
+	
+	# Percent-encode the pathname.
+	local url_path=''
+	{
+	    # Use LC_CTYPE=C to process text byte-by-byte. Ensure that
+	    # LC_ALL isn't set, so it doesn't interfere.
+	    local i ch hexch LC_CTYPE=C LC_ALL=
+	    for ((i = 0; i < ${#PWD}; ++i)); do
+		ch="${PWD:i:1}"
+		if [[ "$ch" =~ [/._~A-Za-z0-9-] ]]; then
+		    url_path+="$ch"
+		else
+		    printf -v hexch "%02X" "'$ch"
+		    # printf treats values greater than 127 as
+		    # negative and pads with "FF", so truncate.
+		    url_path+="%${hexch: -2:2}"
+		fi
+	    done
+	}
+	
+	printf '\e]7;%s\a' "file://$HOSTNAME$url_path"
+    }
+
 # get current branch in git repo
 function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -101,6 +128,7 @@ function __prompt_command {
     fi
 
     PS1+=" \[\e[m\]"
+	update_terminal_cwd
 }
 
 PROMPT_COMMAND=__prompt_command
