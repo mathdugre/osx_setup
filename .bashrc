@@ -2,7 +2,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PATH="~/bin:$PATH"
 export CPATH=`xcrun --show-sdk-path`/usr/include
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
-
+export PATH=$PATH:/usr/local/go/bin
 
 ####################
 ###    ALIAS     ###
