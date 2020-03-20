@@ -30,6 +30,7 @@ alias cp='cp -i'
 
 ### Python ###
 alias py=python3
+alias cvenv='python3 -m venv .venv'
 alias venv='source .venv/bin/activate'
 alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings pytest'
 
