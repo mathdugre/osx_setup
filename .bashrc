@@ -1,8 +1,10 @@
 export PIP_REQUIRE_VIRTUALENV=true
-export PATH="~/bin:$PATH"
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:$PATH
 export CPATH=`xcrun --show-sdk-path`/usr/include
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/go/bin:$PATH
+export GOPATH=$HOME/go
 
 ####################
 ###    ALIAS     ###
@@ -29,9 +31,9 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 ### Python ###
-alias py=python3
-alias cvenv='python3 -m venv .venv'
+alias py=python3.8
 alias venv='source .venv/bin/activate'
+alias cvenv='py -m venv .venv && venv'
 alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings pytest'
 
 ####################
