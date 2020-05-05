@@ -12,7 +12,7 @@
     "editorRuler.foreground": "#ff4081"
   },
   "window.zoomLevel": 0,
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
   // Terminal panel
@@ -40,12 +40,15 @@
   "python.testing.pytestEnabled": true,
   "python.formatting.provider": "black",
   "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
   "python.linting.pydocstyleEnabled": true,
   "python.linting.flake8Args": ["--docstring-convention numpy"],
   "autoDocstring.docstringFormat": "numpy",
   "python.linting.pylintEnabled": false,
+  "python.linting.mypyEnabled": true,
   "python.linting.pylintUseMinimalCheckers": false,
+  // GO
+  "go.formatTool": "goreturns",
+  "go.autocompleteUnimportedPackages": true,
   // LATEX
   "latex-workshop.view.pdf.viewer": "tab",
   // MARKDOWN
@@ -57,5 +60,7 @@
     "**/node_modules/**": true,
     "**/.direnv/**": true,
     "**/.venv/**": true
-  }
+  },
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false
 }
