@@ -1,5 +1,4 @@
 export PIP_REQUIRE_VIRTUALENV=true
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=~/bin:$PATH
 export CPATH=`xcrun --show-sdk-path`/usr/include
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
@@ -31,10 +30,15 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 ### Python ###
-alias py=python3.8
-alias venv='source .venv/bin/activate'
-alias cvenv='py -m venv .venv && venv'
-alias pyvinit='pip install black mypy flake8 pydocstyle flake8-docstrings pytest'
+export EDITOR=code
+export PATH=~/python/bin:$PATH
+alias py36=python3.6
+alias py37=python3.7
+alias py38=python3.8
+alias py39=python3.9
+alias py=py38
+alias pinit='
+pipenv install --dev --pre blacken-docs flake8-docstrings pytest pre-commit mypy'
 
 ####################
 ###  PS1 Config  ###
