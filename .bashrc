@@ -21,9 +21,6 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
 
 # Protection
 alias mv='mv -i'
@@ -32,11 +29,7 @@ alias cp='cp -i'
 ### Python ###
 export EDITOR=code
 export PATH=~/python/bin:$PATH
-alias py36=python3.6
-alias py37=python3.7
-alias py38=python3.8
-alias py39=python3.9
-alias py=py38
+alias py=python3.8
 alias pinit='
 pipenv install --dev --pre blacken-docs flake8-docstrings pytest pre-commit mypy'
 
@@ -142,6 +135,3 @@ PROMPT_COMMAND=__prompt_command
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-
-# added by travis gem
-[ -f /Users/math/.travis/travis.sh ] && source /Users/math/.travis/travis.sh
