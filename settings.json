@@ -12,9 +12,13 @@
     "editorRuler.foreground": "#ff4081"
   },
   "window.zoomLevel": 0,
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "all",
   // Terminal panel
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
   "terminal.integrated.fontSize": 14,
@@ -46,9 +50,14 @@
   "python.linting.pylintEnabled": false,
   "python.linting.mypyEnabled": true,
   "python.linting.pylintUseMinimalCheckers": false,
+  "python.jediEnabled": false,
   // GO
   "go.formatTool": "goreturns",
   "go.autocompleteUnimportedPackages": true,
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   // LATEX
   "latex-workshop.view.pdf.viewer": "tab",
   // MARKDOWN
@@ -61,6 +70,12 @@
     "**/.direnv/**": true,
     "**/.venv/**": true
   },
-  "zenMode.hideLineNumbers": false,
-  "zenMode.centerLayout": false
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path.mac": "/Users/math/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.minikube-path.mac": "/Users/math/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.draft-path.mac": "/Users/math/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+  },
+  "workbench.sideBar.location": "right",
 }
