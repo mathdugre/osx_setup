@@ -8,17 +8,18 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
+  "editor.fontSize": 18,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "all",
+  "workbench.sideBar.location": "right",
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
   },
   "window.zoomLevel": 0,
-  "editor.fontSize": 18,
-  "editor.fontFamily": "FiraCode-Retina",
-  "editor.fontLigatures": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.centerLayout": false,
   "breadcrumbs.enabled": true,
-  "editor.renderWhitespace": "all",
   // Terminal panel
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
   "terminal.integrated.fontSize": 14,
@@ -60,8 +61,6 @@
   },
   // LATEX
   "latex-workshop.view.pdf.viewer": "tab",
-  // MARKDOWN
-  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left:auto; margin-right: 1cm;\"> <span class='date'></span>",
   //OTHER
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -70,12 +69,4 @@
     "**/.direnv/**": true,
     "**/.venv/**": true
   },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "vs-kubernetes": {
-    "vs-kubernetes.helm-path.mac": "/Users/math/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.minikube-path.mac": "/Users/math/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.draft-path.mac": "/Users/math/.vs-kubernetes/tools/draft/darwin-amd64/draft"
-  },
-  "workbench.sideBar.location": "right",
 }

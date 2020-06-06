@@ -30,8 +30,7 @@ alias cp='cp -i'
 export EDITOR=code
 export PATH=~/python/bin:$PATH
 alias py=python3.8
-alias pinit='
-pipenv install --dev --pre blacken-docs flake8-docstrings pytest pre-commit mypy'
+alias pyinit="blacken-docs flake8-docstrings pytest pre-commit mypy"
 
 ####################
 ###  PS1 Config  ###
